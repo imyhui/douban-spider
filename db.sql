@@ -9,7 +9,7 @@ CREATE TABLE `movies` (
   `director` varchar(100) NOT NULL DEFAULT '' COMMENT '导演',
   `screenwriter` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '编剧',
   `mainactors` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '主演',
-  `tags` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '制片国家',
+  `tags` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '类型',
   `countries` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '制片国家',
   `languages` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '语言',
   `release_time` varchar(200) NOT NULL DEFAULT '' COMMENT '上映日期',
