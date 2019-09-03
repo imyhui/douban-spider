@@ -1,4 +1,5 @@
 import requests
+from fake_useragent import UserAgent
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
@@ -14,7 +15,7 @@ class Task():
     def __init__(self, name):
         self.name = name
         self.session = requests.Session()
-        # todo faker headers
+        headers["User-Agent"] = str(UserAgent().random)
         self.session.headers.update(headers)
         print("任务 " + self.name + " 已创建")
 

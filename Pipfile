@@ -10,6 +10,7 @@ requests = "*"
 pymysql = "*"
 bs4 = "*"
 lxml = "*"
+fake-useragent = "*"
 
 [requires]
 python_version = "3.6"
