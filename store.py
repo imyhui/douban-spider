@@ -65,3 +65,16 @@ def info_save(data):
     finally:
         cur.close()
         db.close()
+
+
+def get_stored_ids():
+    db = pymysql.connect(host=settings.HOST, user=settings.USER, passwd=settings.PASSWD, port=3306, db=settings.DB,
+                         charset="utf8")
+    sql = "select douban_id from movies"
+    cur = db.cursor()
+    cur.execute(sql)
+    rows = cur.fetchall()
+    results = []
+    for row in rows:
+        results.append(row[0])
+    return results

@@ -9,6 +9,7 @@ def main():
         os.makedirs(today)
         print("路径创建成功")
         pass
+    get_stored()
 
     tag_queue = Queue(100)
     movie_queue = Queue(50000)

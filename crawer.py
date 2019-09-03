@@ -4,13 +4,20 @@ import random
 import time
 import threading
 from bs4 import BeautifulSoup
-from store import info_save
+from store import info_save, get_stored_ids
 from functools import reduce
 
 movie_ids = set()
 lock = threading.Lock()
 
 today = time.strftime("%Y-%m-%d", time.localtime())
+
+
+def get_stored():
+    stored = get_stored_ids()
+    for sid in stored:
+        movie_ids.add(sid)
+    print(movie_ids)
 
 
 def get_tags():
