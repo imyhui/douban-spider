@@ -1,5 +1,6 @@
 import threading
 import time
+import settings
 
 
 class WorkThread(threading.Thread):
@@ -44,9 +45,9 @@ class WorkThread(threading.Thread):
 class ThreadPool():
     def __init__(self, tag_queque, movie_queue, db_queue):
         # 初始化线程数 可配置
-        self.tag_thread_num = 1
-        self.movie_thread_num = 2
-        self.db_thread_num = 4
+        self.tag_thread_num = settings.TAG_THREAD_NUM
+        self.movie_thread_num = settings.MOVIE_THREAD_NUM
+        self.db_thread_num = settings.DB_THREAD_NUM
         self.movie_queue = movie_queue
         self.tag_queque = tag_queque
         self.pool = []
